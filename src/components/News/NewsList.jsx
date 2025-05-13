@@ -21,7 +21,7 @@ export default function NewsList({ news }) {
   }, []);
 
   if (isMobile === null) {
-    return null; // или return <Loading /> — если хотите показать прелоадер
+    return null; 
   }
 
   if (isMobile) {
