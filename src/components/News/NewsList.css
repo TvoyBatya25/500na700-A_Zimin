@@ -1,0 +1,26 @@
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .swiper-navigation {
+    padding-inline: 0.625rem;
+    margin-top: 1.875rem;
+  }
+
+  .swiper-button-prev-custom:hover,
+  .swiper-button-next-custom:hover {
+    background: none;
+    color: rgb(255, 255, 255, 0.5);
+  }
+
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    all: unset;
+    width: 2.5rem;
+    height: auto;
+  }
+}

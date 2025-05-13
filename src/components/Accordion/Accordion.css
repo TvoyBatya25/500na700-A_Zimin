@@ -1,0 +1,30 @@
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-inline: 40px;
+  margin-bottom: 6.944vw;
+}
+
+.accordion__faq {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.accordion__list {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+@media (max-width: 426px) {
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0.625rem;
+    margin-bottom: 5rem;
+  }
+
+  .accordion__faq h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.875rem;
+    padding-inline: 0;
+  }
+}

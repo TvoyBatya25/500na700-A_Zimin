@@ -1,0 +1,40 @@
+.accordion-item__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 30px 0;
+}
+
+.accordion-item__arrow {
+  width: 1.088rem;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item__arrow.rotate-accordion-arrow {
+  transform: rotate(90deg);
+}
+
+.accordion-item__content {
+  width: 36.25rem;
+}
+
+.accordion-item__title-text {
+  width: 52.75rem;
+}
+
+@media (max-width: 426px) {
+  .accordion-item__title {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 20px 0 20px 0;
+  }
+
+  .accordion-item__content {
+    width: 18.75rem;
+  }
+
+  .accordion-item__title-text {
+    width: 15.25rem;
+  }
+}

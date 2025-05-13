@@ -1,0 +1,151 @@
+.header {
+  background-color: rgba(15, 15, 23, 1);
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  box-sizing: border-box;
+  max-height: 281px;
+  width: 100vw;
+}
+
+.header__container {
+  padding: 20px 40px;
+  background-color: rgba(15, 15, 23, 1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 70px;
+  height: 84px;
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar__list-item {
+  transition-duration: 0.2s;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.navbar__list-item:hover {
+  opacity: 0.8;
+}
+
+.header__feedbackButton {
+  justify-self: end;
+}
+
+.dropdown-arrow {
+  padding-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotate {
+  transform: rotate(90deg);
+}
+
+.dropdown-list {
+  grid-area: 2 / 2 / 3 / 3;
+  max-height: 161px;
+}
+
+.dropdown-list ul {
+  height: 87px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.dropdown-list ul li {
+  padding: 0 25px 10px 0;
+  text-wrap: nowrap;
+}
+
+.header__burger-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    gap: 10px;
+    justify-self: center;
+  }
+  .header__feedbackButton button {
+    font-size: 0.75rem;
+    text-wrap: wrap;
+    width: 80%;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 426px) {
+  .header__container {
+    padding-inline: 10px;
+    height: 5.188rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .header__logo {
+    width: 2.728rem;
+    height: 3.258rem;
+  }
+
+  .header__logo svg {
+    width: 2.728rem;
+    height: 3.258rem;
+  }
+
+  .header__burger-btn {
+    display: block;
+    background: none;
+    border: none;
+    width: 2.25rem;
+    height: auto;
+    padding: 0;
+    justify-self: end;
+  }
+
+  .header__burger-btn span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 6px 0;
+  }
+
+  .header__burger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(0px, 5px);
+  }
+
+  .header__burger-btn.active span:nth-child(2) {
+    transform: rotate(-45deg) translate(2px, -6px);
+  }
+
+  .header__burger-btn:hover {
+    background: none;
+  }
+
+  .header__feedbackButton {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+}

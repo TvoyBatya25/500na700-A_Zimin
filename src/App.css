@@ -1,0 +1,87 @@
+:root {
+  font-family: Inter;
+  --primary-color: rgba(15, 15, 23, 1);
+
+  background-color: var(--primary-color);
+  color: white;
+
+  --button-border-radius: 40px;
+  --input-radius: 10px;
+
+  --gradient-color: linear-gradient(180deg, #fb8627 0%, #f5bef6 100%);
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  padding-top: 179px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: var(--font-regular);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.2s;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+button {
+  padding: 12px 20px;
+  width: 181px;
+  font-size: 16px;
+  font-weight: var(--font-medium);
+  text-wrap: nowrap;
+
+  background: none;
+  color: white;
+
+  background: linear-gradient(rgba(15, 15, 23, 1), rgba(15, 15, 23, 1))
+      padding-box,
+    linear-gradient(180deg, rgba(251, 134, 39, 1), rgba(245, 190, 246, 1))
+      border-box;
+  border: 2px solid transparent;
+  border-radius: var(--button-border-radius);
+
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--gradient-color);
+  transition-duration: 0.2s;
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen {
+  @media (max-width: 426px) {
+    :root {
+      padding-top: 7.688rem;
+    }
+  }
+}

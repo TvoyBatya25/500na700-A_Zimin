@@ -1,0 +1,30 @@
+.footer {
+  background: linear-gradient(180deg, #fb8627 0%, #f5bef6 100%);
+  font-weight: 600;
+  padding-inline: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  height: 15.5rem;
+}
+
+@media (max-width: 426px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    padding-inline: 0;
+    width: 100vw;
+    height: 26.938rem;
+  }
+
+  .footer__text {
+    font-size: 1.25rem;
+    width: 11.938rem;
+    font-weight: 600;
+  }
+}
