@@ -8,7 +8,7 @@ import ArrowPrev from "../../assets/arrow_left.svg";
 import ArrowNext from "../../assets/arrow_right.svg";
 
 export default function NewsList({ news }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(null);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -19,6 +19,10 @@ export default function NewsList({ news }) {
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
+  if (isMobile === null) {
+    return null; // или return <Loading /> — если хотите показать прелоадер
+  }
 
   if (isMobile) {
     return (
